@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:background="@color/gris_oscuro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:text="@string/nombre"
+        android:textSize="24sp"
+        android:textColor="@color/calculadora_igual"
+        android:background="@color/calculadora_operador"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:text="7"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/tvNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn8" />
+
+    <Button
+        android:id="@+id/btn8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:text="8"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/tvNombre"
+        app:layout_constraintStart_toEndOf="@id/btn7"
+        app:layout_constraintEnd_toStartOf="@id/btn9" />
+
+    <Button
+        android:id="@+id/btn9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:text="9"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/tvNombre"
+        app:layout_constraintStart_toEndOf="@id/btn8"
+        app:layout_constraintEnd_toStartOf="@id/btnPor" />
+
+    <Button
+        android:id="@+id/btnPor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:text="x"
+        app:backgroundTint="@color/calculadora_verde"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/tvNombre"
+        app:layout_constraintStart_toEndOf="@id/btn9"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:text="4"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/btn7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn5" />
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:text="5"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/btn8"
+        app:layout_constraintStart_toEndOf="@id/btn4"
+        app:layout_constraintEnd_toStartOf="@id/btn6" />
+
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:text="6"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/btn9"
+        app:layout_constraintStart_toEndOf="@id/btn5"
+        app:layout_constraintEnd_toStartOf="@id/btnMenos" />
+
+    <Button
+        android:id="@+id/btnMenos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:text="-"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/calculadora_verde"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/btnPor"
+        app:layout_constraintStart_toEndOf="@id/btn6"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:text="1"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/btn4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn2" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:text="2"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/btn5"
+        app:layout_constraintStart_toEndOf="@id/btn1"
+        app:layout_constraintEnd_toStartOf="@id/btn3" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:text="3"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/btn6"
+        app:layout_constraintStart_toEndOf="@id/btn2"
+        app:layout_constraintEnd_toStartOf="@id/btnMas" />
+
+    <Button
+        android:id="@+id/btnMas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:text="+"
+        app:backgroundTint="@color/calculadora_verde"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/btnMenos"
+        app:layout_constraintStart_toEndOf="@id/btn3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnComa"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:text=","
+        app:backgroundTint="@color/calculadora_operador"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/btn1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn0" />
+
+    <Button
+        android:id="@+id/btn0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:text="0"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/btn2"
+        app:layout_constraintStart_toEndOf="@id/btnComa"
+        app:layout_constraintEnd_toStartOf="@id/btnIgual" />
+
+    <Button
+        android:id="@+id/btnIgual"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:text="="
+        app:backgroundTint="@color/calculadora_igual"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintTop_toBottomOf="@id/btn3"
+        app:layout_constraintStart_toEndOf="@id/btn0"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,5 +4,13 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#FF004D98</color>
     <color name="red">#FFA50044</color>
+    <color name="orange">#FFFFA040</color>
+    <color name="gris_oscuro">#FF888888</color>
+    <color name="calculadora_fondo">#FFF0F0F0</color>
+    <color name="calculadora_numero">#FFFFFFFF</color>
+    <color name="calculadora_operador">#FFCCCCCC</color>
+    <color name="calculadora_verde">#FF408080</color>
+    <color name="calculadora_igual">#FF800040</color>
+    <color name="calculadora_texto">#FF333333</color>
 
 </resources>
