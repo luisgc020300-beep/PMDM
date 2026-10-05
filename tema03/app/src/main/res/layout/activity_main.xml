@@ -11,7 +11,7 @@
         android:id="@+id/tvNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Luis Gomez"
+        android:text="@string/app_name"
         android:textSize="24sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="142dp"
@@ -21,7 +21,7 @@
         android:id="@+id/btnContinuar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Continuar"
+        android:text="@string/boton_continuar"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="239dp"
         tools:layout_editor_absoluteY="212dp" />
@@ -30,7 +30,7 @@
         android:id="@+id/btnCancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cancelar"
+        android:text="@string/boton_cancelar"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="70dp"
         tools:layout_editor_absoluteY="212dp" />

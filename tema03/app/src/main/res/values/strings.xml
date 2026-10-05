@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">RecursosLuis</string>
+    <string name="nombre_completo">Luis Gómez Cortes</string>
+    <string name="boton_continuar">Continuar</string>
+    <string name="boton_cancelar">Cancelar</string>
 </resources>
