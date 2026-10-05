@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.RecursosLuis" parent="Base.Theme.RecursosLuis" />
+
+    <style name="BotonTarea" parent="Widget.Material3.Button">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 </resources>

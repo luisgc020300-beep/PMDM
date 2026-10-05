@@ -20,21 +20,21 @@
     <Button
         android:id="@+id/btnContinuar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/boton_continuar"
         app:backgroundTint="@color/verde_continuar"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="239dp"
-        tools:layout_editor_absoluteY="212dp" />
+        tools:layout_editor_absoluteY="212dp"
+        style="@style/BotonTarea"/>
 
     <Button
         android:id="@+id/btnCancelar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/boton_cancelar"
         app:backgroundTint="@color/rojo_cancelar"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="212dp" />
+        tools:layout_editor_absoluteY="212dp"
+        style="@style/BotonTarea"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
