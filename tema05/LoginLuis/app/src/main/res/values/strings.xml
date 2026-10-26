@@ -1,5 +1,4 @@
 <resources>
-
         <string name="app_name">LoginLuis</string>
         <string name="correo">Correo electrónico</string>
         <string name="contrasena">Contraseña</string>
@@ -13,5 +12,4 @@
         <string name="error_correo">Escribe tu correo</string>
         <string name="error_contrasena">Escribe la contraseña</string>
         <string name="demasiados_intentos">Demasiados intentos</string>
-
 </resources>
