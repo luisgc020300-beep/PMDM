@@ -1,0 +1,17 @@
+<resources>
+
+        <string name="app_name">LoginLuis</string>
+        <string name="correo">Correo electrónico</string>
+        <string name="contrasena">Contraseña</string>
+        <string name="p_correo">nombre@correo.com</string>
+        <string name="p_contrasena">Tu contraseña</string>
+        <string name="recordar">Recordar contraseña</string>
+        <string name="continuar">Continuar</string>
+        <string name="msg_correcto">Usuario y contraseña correctos</string>
+        <string name="msg_correcto_recordar">Usuario y contraseña correctos. Almacenados para siguientes accesos</string>
+        <string name="msg_incorrecto">Usuario y/o contraseña incorrectos</string>
+        <string name="error_correo">Escribe tu correo</string>
+        <string name="error_contrasena">Escribe la contraseña</string>
+        <string name="demasiados_intentos">Demasiados intentos</string>
+
+</resources>
