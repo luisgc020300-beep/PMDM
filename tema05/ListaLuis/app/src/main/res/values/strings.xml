@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ListaLuis</string>
     <string name="imagen_elemento">Imagen del elemento</string>
+    strings.xml: <string name="cabecera">Los coches de Luis</string>
 </resources>
