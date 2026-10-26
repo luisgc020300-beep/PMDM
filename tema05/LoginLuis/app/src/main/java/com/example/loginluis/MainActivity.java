@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btnContinuar;
     private TextView tvMensaje;
 
+    private int intentos = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,15 +65,20 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (correo.equals(CORREO_VALIDO) && contrasena.equals(CONTRASENA_VALIDA)) {
+            intentos = 0;
             tvMensaje.setTextColor(getColor(R.color.verde));
             if (swRecordar.isChecked()) {
                 tvMensaje.setText(R.string.msg_correcto_recordar);
-            } else {
-                tvMensaje.setText(R.string.msg_correcto);
-            }
-        } else {
+            }         } else {
+            intentos++;
             tvMensaje.setTextColor(getColor(R.color.rojo));
-            tvMensaje.setText(R.string.msg_incorrecto);
+            if (intentos >= 3) {
+                tvMensaje.setText(R.string.demasiados_intentos);
+                btnContinuar.setEnabled(false);
+                Toast.makeText(this, R.string.demasiados_intentos, Toast.LENGTH_SHORT).show();
+            } else {
+                tvMensaje.setText(R.string.msg_incorrecto);
+            }
         }
     }
 }
