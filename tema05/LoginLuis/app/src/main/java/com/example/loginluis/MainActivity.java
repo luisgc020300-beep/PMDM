@@ -49,6 +49,19 @@ public class MainActivity extends AppCompatActivity {
         String correo = etCorreo.getText().toString();
         String contrasena = etContrasena.getText().toString();
 
+        boolean hayVacios = false;
+        if (correo.isEmpty()) {
+            etCorreo.setError(getString(R.string.error_correo));
+            hayVacios = true;
+        }
+        if (contrasena.isEmpty()) {
+            etContrasena.setError(getString(R.string.error_contrasena));
+            hayVacios = true;
+        }
+        if (hayVacios) {
+            return;
+        }
+
         if (correo.equals(CORREO_VALIDO) && contrasena.equals(CONTRASENA_VALIDA)) {
             tvMensaje.setTextColor(getColor(R.color.verde));
             if (swRecordar.isChecked()) {
