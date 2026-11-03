@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.materialswitch.MaterialSwitch;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -66,10 +67,11 @@ public class MainActivity extends AppCompatActivity {
 
         if (correo.equals(CORREO_VALIDO) && contrasena.equals(CONTRASENA_VALIDA)) {
             intentos = 0;
-            tvMensaje.setTextColor(getColor(R.color.verde));
-            if (swRecordar.isChecked()) {
-                tvMensaje.setText(R.string.msg_correcto_recordar);
-            }         } else {
+            Intent intent = new Intent(this, MenuActivity.class);
+            intent.putExtra(MenuActivity.EXTRA_CORREO, correo);
+            startActivity(intent);
+            finish();
+        } else {
             intentos++;
             tvMensaje.setTextColor(getColor(R.color.rojo));
             if (intentos >= 3) {
