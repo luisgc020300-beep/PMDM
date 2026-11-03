@@ -4,7 +4,7 @@
         <string name="contrasena">Contraseña</string>
         <string name="p_correo">nombre@correo.com</string>
         <string name="p_contrasena">Tu contraseña</string>
-        <string name="recordar">Recordar contraseña</string>
+        <string name="recordar">Recordar correo</string>
         <string name="continuar">Continuar</string>
         <string name="msg_correcto">Usuario y contraseña correctos</string>
         <string name="msg_correcto_recordar">Usuario y contraseña correctos. Almacenados para siguientes accesos</string>
@@ -15,5 +15,4 @@
         <string name="titulo_menu">Menú principal</string>
         <string name="saludo">Hola, %1$s</string>
         <string name="cerrar_sesion">Cerrar sesión</string>
-        <string name="recordar_correo">Recordar correo</string>
 </resources>

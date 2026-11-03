@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.materialswitch.MaterialSwitch;
 import android.content.Intent;
+import android.content.SharedPreferences;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private MaterialSwitch swRecordar;
     private Button btnContinuar;
     private TextView tvMensaje;
+    private SharedPreferences preferenciass;
 
     private int intentos = 0;
 
@@ -44,6 +46,15 @@ public class MainActivity extends AppCompatActivity {
         swRecordar = findViewById(R.id.swRecordar);
         btnContinuar = findViewById(R.id.btnContinuar);
         tvMensaje = findViewById(R.id.tvMensaje);
+
+        preferenciass = getSharedPreferences("sesion", MODE_PRIVATE);
+
+        String guardado = preferenciass.getString("correo", "");
+        if (!guardado.isEmpty()) {
+            etCorreo.setText(guardado);
+            swRecordar.setChecked(true);
+            etContrasena.requestFocus();
+        }
 
         btnContinuar.setOnClickListener(v -> comprobarAcceso());
     }
@@ -67,6 +78,13 @@ public class MainActivity extends AppCompatActivity {
 
         if (correo.equals(CORREO_VALIDO) && contrasena.equals(CONTRASENA_VALIDA)) {
             intentos = 0;
+
+            if (swRecordar.isChecked()) {
+                preferenciass.edit().putString("correo", correo).apply();
+            } else {
+                preferenciass.edit().remove("correo").apply();
+            }
+
             Intent intent = new Intent(this, MenuActivity.class);
             intent.putExtra(MenuActivity.EXTRA_CORREO, correo);
             startActivity(intent);
