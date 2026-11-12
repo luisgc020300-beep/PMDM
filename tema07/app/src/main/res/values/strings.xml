@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ReproductorLuis</string>
+    <string name="titulo_app">Reproductor de Luis</string>
+    <string name="cancion">CyberPunk music · Poradovski</string>
+    <string name="tiempo_inicial">00:00</string>
+    <string name="play">Play</string>
+    <string name="pausa">Pausa</string>
+    <string name="titulo_efectos">Efectos de sonido</string>
+    <string name="aplauso">Aplauso</string>
+    <string name="campana">Campana</string>
+    <string name="laser">Láser</string>
+    <string name="moneda">Moneda</string>
+</resources>
