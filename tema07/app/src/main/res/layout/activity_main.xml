@@ -93,7 +93,62 @@
                     app:backgroundTint="@color/rojo" />
             </LinearLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:text="@string/titulo_efectos"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAplauso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:enabled="false"
+                    android:text="@string/aplauso" />
+
+                <Button
+                    android:id="@+id/btnCampana"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:text="@string/campana" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnLaser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:enabled="false"
+                    android:text="@string/laser" />
+
+                <Button
+                    android:id="@+id/btnMoneda"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:text="@string/moneda" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 

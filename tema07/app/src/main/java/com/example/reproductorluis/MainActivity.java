@@ -1,5 +1,7 @@
 package com.example.reproductorluis;
 
+import android.media.AudioAttributes;
+import android.media.SoundPool;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -26,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
     private TextView txtActual, txtTotal;
     private final Handler handler = new Handler(Looper.getMainLooper());
     private boolean usuarioMoviendo = false;
+
+    private SoundPool soundPool;
+    private int idAplauso, idCampana, idLaser, idMoneda;
+    private int cargados = 0;
 
     private final Runnable actualizar = new Runnable() {
         @Override
@@ -102,8 +108,44 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        AudioAttributes atributos = new AudioAttributes.Builder()
+                .setUsage(AudioAttributes.USAGE_GAME)
+                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                .build();
 
+        soundPool = new SoundPool.Builder()
+                .setMaxStreams(4)
+                .setAudioAttributes(atributos)
+                .build();
+
+        Button btnAplauso = findViewById(R.id.btnAplauso);
+        Button btnCampana = findViewById(R.id.btnCampana);
+        Button btnLaser = findViewById(R.id.btnLaser);
+        Button btnMoneda = findViewById(R.id.btnMoneda);
+
+        soundPool.setOnLoadCompleteListener((pool, id, estado) -> {
+            if (estado == 0) {
+                cargados++;
+                if (cargados == 4) {
+                    btnAplauso.setEnabled(true);
+                    btnCampana.setEnabled(true);
+                    btnLaser.setEnabled(true);
+                    btnMoneda.setEnabled(true);
+                }
+            }
+        });
+
+        idAplauso = soundPool.load(this, R.raw.efecto_aplauso, 1);
+        idCampana = soundPool.load(this, R.raw.efecto_campana, 1);
+        idLaser = soundPool.load(this, R.raw.efecto_laser, 1);
+        idMoneda = soundPool.load(this, R.raw.efecto_moneda, 1);
+
+        btnAplauso.setOnClickListener(v -> soundPool.play(idAplauso, 1f, 1f, 1, 0, 1f));
+        btnCampana.setOnClickListener(v -> soundPool.play(idCampana, 1f, 1f, 1, 0, 1f));
+        btnLaser.setOnClickListener(v -> soundPool.play(idLaser, 1f, 1f, 1, 0, 1f));
+        btnMoneda.setOnClickListener(v -> soundPool.play(idMoneda, 1f, 1f, 1, 0, 1f));
     }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -121,7 +163,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         player.release();
+        soundPool.release();
     }
+
     private String formatear(long ms) {
         long segundos = ms / 1000;
         return String.format(Locale.getDefault(), "%02d:%02d", segundos / 60, segundos % 60);
